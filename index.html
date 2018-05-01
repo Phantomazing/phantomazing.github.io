@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway%7CRoboto" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon.png">
+
+  <script src="js/bootstrap.min.js"></script>
+
+  <title>Tom Campbell</title>
+</head>
+
+<body>
+  <header>
+    <div class="hello"><img alt="banner" src="img/banner.gif"></div>
+    <nav id="navbar">
+      <a href="index.html"><img alt="Tom Campbell" src="img/sig.svg"></a>
+      <div>
+        <a href="javascript:void(0);" class="icon" onclick="burger()">&#9776;</a>
+        <ul class="dropdown" id="dropdownMenu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="design.html">Design</a></li>
+          <li><a href="programming.html">Programming</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <article>
+    <h1>Who Am I?</h1>
+    <p>Thomas "Tom" Campbell was born on July 17, 1999, in Long Branch, New Jersey. Campbell grew up fascinated by computers and video games, one day wishing to make his own video game. At the age of nine, Campbell created his own website with the help of his father. This website contained some of Campbell's favorite Adobe Flash games from across the web and images he made himself using Microsoft Paint.</p>
+
+    <p>Campbell's love for digital art led him to Communications High School, one of the renowned Monmouth County Vocational School District schools. Campbell made plenty of great friends at Communications, while also furthering his skills of graphic arts and computer programming through the specialized courses offered at the vocational school. Through Communications's senior year Mentorship program, Campbell went to intern at Solari Creative, a design studio in Red Bank, New Jersey. There, Campbell worked on artistic collaborations with master graphic designers, working on projects for Citi and the United States Army.</p>
+
+    <p>Currently, Campbell is a freshman at the College of New Jersey, studying Interactive Multimedia. Campbell still loves computers and design with all his heart, and still holds onto his childhood dream of making his own video game. Campbell hopes to one day make a living doing digital design, whether its working alone or at a studio.</p>
+
+    <p>Campbell also really likes his three cats: Sundae, Bradley, and Chloe. They are precious and important.</p>
+
+  </article>
+
+  <script>
+    function burger() {
+      var x = document.getElementById("dropdownMenu");
+      if (x.className == "dropdown") {
+        x.className = "dropdownMenu";
+      } else {
+        x.className = "dropdown";
+      }
+    }
+  </script>
+
+  <script>
+    window.onscroll = function() {
+      stickybar()
+    };
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function stickybar() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
+  <footer>© 2018 Tom Campbell</footer>
+
+</body>
+
+</html>
