@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="shortcut icon" type="image/x-icon" href="https://cdn.discordapp.com/emojis/348126102079799297.png">
   <link href="./womp_files/css" rel="stylesheet" type="text/css">
+  <script src="womp_files/jquery-2.1.4.min.js.download"></script>
 
   <style>
     html {
@@ -16,6 +17,18 @@
 
     body {
       background: url(womp_files/background.jpg) center center #ccc;
+    }
+
+    center {
+      color: white;
+      font-size: 64px;
+      z-index: 270792;
+      margin: auto;
+      right: 0;
+      left: 0;
+      top: 50px;
+      position: absolute;
+      background-color: #0007
     }
 
     .bumimg {
@@ -544,7 +557,22 @@
       <img class="spirit-uu" src="./womp_files/frog2.png">
       <img class="spirit-vv" src="./womp_files/frog2.png">
       <img class="spirit-ww" src="./womp_files/frog1.png">
-      <a class="spirit-aaa" href="https://www.youtube.com/watch?v=TEpEZAl15qU"><img src="./womp_files/smug.png"></a>
+      <a class="spirit-aaa" href="smug.html"><img src="./womp_files/smug.png"></a>
+
+      <center>
+        <big>You have womped for <span id="spin">0 seconds</span>!</big>
+      </center>
+
+      <script>
+        $(window).load(function() {
+          var spins = 0;
+          setInterval(function() {
+            spins++;
+            $("#spin").text(spins + " second" + (spins != 1 ? "s" : ""));
+          }, 1000);
+        });
+
+      </script>
     </div>
   </div>
   <iframe width="1" height="1" src="https://www.youtube.com/embed/T9m26h0_Jxo?autoplay=1" frameborder="0" allowfullscreen="" style="visibility:hidden!important;position:absolute;bottom:0;right:0;"></iframe>
